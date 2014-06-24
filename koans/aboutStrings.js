@@ -1,14 +1,14 @@
 describe('Given a string literal stored in a variable', function () {
     it('it should have a type of String', function () {
         var a = 'a';
-        expect('string').toBe(typeof(a));
+        expect(toDo).toBe(typeof(a));
     });
 });
 
 describe('Given a string', function() {
     it('you can verify its length', function(){
         var a = '0123456789';
-        expect(10).toBe(a.length);
+        expect(toDo).toBe(a.length);
     });
 });
 
@@ -20,8 +20,8 @@ describe('Given a string that actually consists of a sequence of characters', fu
         var value = 'let';
         value[0] = 'g';
 
-        expect('let').toBe(value);
-        expect('l').toBe(value[0]);
+        expect(toDo).toBe(value);
+        expect(toDo).toBe(value[0]);
     });
 });
 
@@ -31,7 +31,7 @@ describe('Given a string and an integer', function(){
        var b = '2';
        var value = a + b;
 
-       expect('22').toBe(value);
+       expect(toDo).toBe(value);
    });
 });
 
@@ -41,7 +41,7 @@ describe('Given two distinct string values', function() {
         var bar = 'bar';
 
         var value = foo + bar;
-        expect('foobar').toBe(value);
+        expect(toDo).toBe(value);
     });
 
     it('should combine null and a string', function(){
@@ -49,7 +49,7 @@ describe('Given two distinct string values', function() {
         var bar = 'bar';
         var value = foo + bar;
 
-        expect('nullbar').toBe(value); // WAT
+        expect(toDo).toBe(value); // WAT
     });
 
     it('should combine undefined and a string', function(){
@@ -57,7 +57,7 @@ describe('Given two distinct string values', function() {
         var bar = 'bar';
         var value = foo + bar;
 
-        expect('undefinedbar').toBe(value); // WAT
+        expect(toDo).toBe(value); // WAT
     });
 });
 
@@ -68,8 +68,8 @@ describe('Given a string with a separator character in the middle', function(){
        var value1 = values[0];
        var value2 = values[1];
 
-       expect('foo').toEqual(value1);
-       expect('bar').toEqual(value2);
+       expect(toDo).toEqual(value1);
+       expect(toDo).toEqual(value2);
    });
 });
 
@@ -81,9 +81,9 @@ describe('Given a string that should be split with multiple separator tokens', f
         var value2 = values[1];
         var value3 = values[2];
 
-        expect('foo').toEqual(value1);
-        expect('bar').toEqual(value2);
-        expect('baz').toEqual(value3);
+        expect(toDo).toEqual(value1);
+        expect(toDo).toEqual(value2);
+        expect(toDo).toEqual(value3);
     });
 });
 
@@ -95,7 +95,7 @@ describe('Given a string which contains a comma', function(){
         var input = ' ,';
         var value = input.indexOf(',');
 
-        expect(1).toEqual(value);
+        expect(toDo).toEqual(value);
     });
 });
 
@@ -105,7 +105,7 @@ describe('Given a string whose content does not contain "flowers"', function() {
         var searchString = 'flowers';
         var value = input.indexOf(searchString);
 
-        expect(-1).toEqual(value);
+        expect(toDo).toEqual(value);
     });
 });
 
@@ -115,7 +115,7 @@ describe('Given a string that contains multiple instances of a given substring',
         var searchString = 'dogs';
         var value = input.indexOf(searchString);
 
-        expect(0).toEqual(value);
+        expect(toDo).toEqual(value);
     });
 });
 
@@ -124,7 +124,7 @@ describe('Given a string which contains two commas', function(){
         var input = 'foo,bar,baz';
         var value = input.indexOf(',', 4);
 
-        expect(7).toEqual(value);
+        expect(toDo).toEqual(value);
     }) ;
 });
 
@@ -136,13 +136,13 @@ describe('Given two strings', function(){
     it('should be able to compare different strings with same case', function(){
         var value = 'abc' < 'bcd';
 
-        expect(true).toBe(value);
+        expect(toDo).toBe(value);
     });
 
     it('should be able to compare two strings which differ only by case', function(){
         var value = 'abc' > 'ABC';
 
-        expect(true).toBe(value);
+        expect(toDo).toBe(value);
     });
 });
 

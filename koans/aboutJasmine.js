@@ -14,7 +14,7 @@ describe('A suite', function () {
         // Expectations are built with the expect function.
         // 'it' takes a value, called 'actual'.
         // 'it' is chained with a Matcher function, which takes the expected value.
-        expect(true).toBe(true);
+        expect(toDo).toBe(true);
     });
 });
 
@@ -28,8 +28,8 @@ describe('A suite is a function', function () {
         // Make this test pass.
         a = true;
 
-        expect(a).not.toBe(undefined);
-        expect(a).toBe(true);
+        expect(toDo).not.toBe(undefined);
+        expect(toDo).toBe(true);
     });
 });
 
@@ -39,10 +39,10 @@ describe('A suite is a function', function () {
 // Jasmine will then pass or fail the spec.
 describe('The "toBe" matcher compares with ===', function () {
     it('and has a positive case', function () {
-        expect(true).toBe(true);
+        expect(toDo).toBe(true);
     });
     it('and can have a negative case', function () {
-        expect('true').not.toBe(true);
+        expect(toDo).not.toBe(true);
     });
 });
 
@@ -57,15 +57,15 @@ describe("Included matchers:", function () {
         var a = 12;
         var b = a;
 
-        expect(a).toBe(b);
-        expect(a).not.toBe(null);
+        expect(toDo).toBe(b);
+        expect(toDo).not.toBe(null);
     });
 
     describe("The 'toEqual' matcher", function () {
 
         it("works for simple literals and variables", function () {
             var a = 12;
-            expect(a).toEqual(12);
+            expect(toDo).toEqual(12);
         });
 
         it("should work for objects", function () {
@@ -77,16 +77,16 @@ describe("Included matchers:", function () {
                 a: 12,
                 b: 34
             };
-            expect(foo).toEqual(bar);
+            expect(toDo).toEqual(bar);
         });
     });
 
     it("The 'toMatch' matcher is for regular expressions", function () {
         var message = "foo bar baz";
 
-        expect(message).toMatch(/bar/);
-        expect(message).toMatch("bar");
-        expect(message).not.toMatch(/quux/);
+        expect(toDo).toMatch(/bar/);
+        expect(toDo).toMatch("bar");
+        expect(toDo).not.toMatch(/quux/);
     });
 
     it("The 'toBeDefined' matcher compares against `undefined`", function () {
@@ -94,8 +94,8 @@ describe("Included matchers:", function () {
             foo: "foo"
         };
 
-        expect(a.foo).toBeDefined();
-        expect(a.bar).not.toBeDefined();
+        expect(toDo).toBeDefined();
+        expect(toDo).not.toBeDefined();
     });
 
     it("The `toBeUndefined` matcher compares against `undefined`", function () {
@@ -103,62 +103,62 @@ describe("Included matchers:", function () {
             foo: "foo"
         };
 
-        expect(a.foo).not.toBeUndefined();
-        expect(a.bar).toBeUndefined();
+        expect(toDo).not.toBeUndefined();
+        expect(toDo).toBeUndefined();
     });
 
     it("The 'toBeNull' matcher compares against null", function () {
         var a = null;
         var foo = "foo";
 
-        expect(null).toBeNull();
-        expect(a).toBeNull();
-        expect(foo).not.toBeNull();
+        expect(toDo).toBeNull();
+        expect(toDo).toBeNull();
+        expect(toDo).not.toBeNull();
     });
 
     it("The 'toBeTruthy' matcher is for boolean casting testing", function () {
         var a, foo = "foo";
 
-        expect(foo).toBeTruthy();
-        expect(a).not.toBeTruthy();
+        expect(toDo).toBeTruthy();
+        expect(toDo).not.toBeTruthy();
     });
 
     it("The 'toBeFalsy' matcher is for boolean casting testing", function () {
         var a, foo = "foo";
 
-        expect(a).toBeFalsy();
-        expect(foo).not.toBeFalsy();
+        expect(toDo).toBeFalsy();
+        expect(toDo).not.toBeFalsy();
     });
 
     it("The 'toContain' matcher is for finding an item in an Array", function () {
         var a = ["foo", "bar", "baz"];
 
-        expect(a).toContain("bar");
-        expect(a).not.toContain("quux");
+        expect(toDo).toContain("bar");
+        expect(toDo).not.toContain("quux");
     });
 
     it("The 'toBeLessThan' matcher is for mathematical comparisons", function () {
         var pi = 3.1415926,
             e = 2.78;
 
-        expect(e).toBeLessThan(pi);
-        expect(pi).not.toBeLessThan(e);
+        expect(toDo).toBeLessThan(pi);
+        expect(toDo).not.toBeLessThan(e);
     });
 
     it("The 'toBeGreaterThan' matcher is for mathematical comparisons", function () {
         var pi = 3.1415926,
             e = 2.78;
 
-        expect(pi).toBeGreaterThan(e);
-        expect(e).not.toBeGreaterThan(pi);
+        expect(toDo).toBeGreaterThan(e);
+        expect(toDo).not.toBeGreaterThan(pi);
     });
 
     it("The 'toBeCloseTo' matcher is for precision math comparison", function () {
         var pi = 3.1415926,
             e = 2.78;
 
-        expect(pi).not.toBeCloseTo(e, 2);
-        expect(pi).toBeCloseTo(e, 0);
+        expect(toDo).not.toBeCloseTo(e, 2);
+        expect(toDo).toBeCloseTo(e, 0);
     });
 
     it("The 'toThrow' matcher is for testing if a function throws an exception", function () {
@@ -169,7 +169,7 @@ describe("Included matchers:", function () {
             return a + 1;
         };
 
-        expect(foo).not.toThrow();
-        expect(bar).toThrow();
+        expect(toDo).not.toThrow();
+        expect(toDo).toThrow();
     });
 });
